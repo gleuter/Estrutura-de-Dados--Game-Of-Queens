@@ -1,11 +1,11 @@
 public class PlayGame {
   public static void main(String[] args) {
-    Board tabuleiro = new Board();
+    Board chessBoard = new Board();
     int[][] board = new int[8][8];
     Plays plays = new Plays();
 
-    tabuleiro.createBoardEmpty(board).initGame(board).validaDiagonal(board);
-     tabuleiro.validaDiagonal(board);
+    chessBoard.createBoardEmpty(board)
+    .initGame(board,2);
 
   }
 }

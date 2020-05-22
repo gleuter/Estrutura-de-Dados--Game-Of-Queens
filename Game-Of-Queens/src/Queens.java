@@ -1,29 +1,27 @@
-
 public class Queens {
-	
-	  private int lineQueens;
-	    private int columsQueens;
 
-	    public Queens(int lineQueens, int columsQueens) {
-	        this.lineQueens = lineQueens;
-	        this.columsQueens = columsQueens;
-	    }
+	private int lineQueens;
+	private int columsQueens;
 
-	    public int getLineQueens() {
-	        return lineQueens;
-	    }
+	public Queens(int lineQueens, int columsQueens) {
+		this.lineQueens = lineQueens;
+		this.columsQueens = columsQueens;
+	}
 
-	    public void setLineQueens(int lineQueens) {
-	        this.lineQueens = lineQueens;
-	    }
+	public int getLineQueens() {
+		return lineQueens;
+	}
 
-	    public int getColumsQueens() {
-	        return columsQueens;
-	    }
+	public void setLineQueens(int lineQueens) {
+		this.lineQueens = lineQueens;
+	}
 
-	    public void setColumsQueens(int columsQueens) {
-	        this.columsQueens = columsQueens;
-	    }
+	public int getColumsQueens() {
+		return columsQueens;
+	}
 
+	public void setColumsQueens(int columsQueens) {
+		this.columsQueens = columsQueens;
+	}
 
 }

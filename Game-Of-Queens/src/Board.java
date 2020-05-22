@@ -19,7 +19,7 @@ public class Board {
     }//finish for line
     return this;
   }
-
+//test
   public Board createBoardEmpty(int board[][], int lineInput, int columnInput) {
     for (int line = 0; line < board.length; line++) {
       for (int column = 0; column < board[0].length; column++) {

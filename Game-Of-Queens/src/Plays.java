@@ -43,5 +43,56 @@ public class Plays {
 		}
 		return false;
 	}
+	
+	
+	
+	
+	public boolean processAttacksUp(LinkedList<Queens> listOfQueensPosisiotioned, int borad[][]) {
+		int line, columms, lineMan;
 
+		for (int listCounter = 0; listCounter < listOfQueensPosisiotioned.size(); listCounter++) {
+			line = listOfQueensPosisiotioned.get(listCounter).getLineQueens();
+			columms = listOfQueensPosisiotioned.get(listCounter).getColumsQueens();
+			System.out.println("^^^^^^ Next move Up : ");
+			lineMan = line;
+			
+			for (int countUp = line; countUp > 0; countUp--) {
+				lineMan = lineMan - 1;
+				System.out.println("Line: " + lineMan + " Columns :" + columms);
+				if (borad[lineMan][columms] == 1) {
+					System.out.println("You Lose !");
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	
+	public boolean processAttacksDown(LinkedList<Queens> listOfQueensPosisiotioned, int borad[][]) {
+		int line, columms, lineMan;
+
+		for (int listCounter = 0; listCounter < listOfQueensPosisiotioned.size(); listCounter++) {
+			line = listOfQueensPosisiotioned.get(listCounter).getLineQueens();
+			columms = listOfQueensPosisiotioned.get(listCounter).getColumsQueens();
+			System.out.println("vvvvv Next move Down : ");
+			lineMan = line;
+			
+			for (int countUp = line; countUp < 7; countUp++) {
+				lineMan = lineMan  + 1;
+				System.out.println("Line: " + lineMan + " Columns :" + columms);
+				if (borad[lineMan][columms] == 1) {
+					System.out.println("You Lose !");
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	
+	
+	
+	
+	
 }

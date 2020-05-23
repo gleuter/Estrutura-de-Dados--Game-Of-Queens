@@ -117,8 +117,10 @@ public class Board {
 			printQueensList(listMovements(line,colums));
 			board[line][colums] = 1;
 			printBoard(board);
-			plays.processAttacksRight(listMovements(line,colums),board);
-			plays.processAttacksLeft(listMovements(line,colums),board);
+//			plays.processAttacksRight(listMovements(line,colums),board);
+//			plays.processAttacksLeft(listMovements(line,colums),board);
+			plays.processAttacksUp(listMovements(line,colums),board);
+			plays.processAttacksDown(listMovements(line,colums),board);
 		}
 		return this;
 	}

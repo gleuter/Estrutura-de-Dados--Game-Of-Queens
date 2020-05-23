@@ -2,7 +2,11 @@ import java.util.LinkedList;
 import java.util.Random;
 import java.util.Scanner;
 
+
+
 public class Board {
+	Plays plays = new Plays();
+	
 	/**
 	 * Create a board filled with zero
 	 *
@@ -111,9 +115,10 @@ public class Board {
 		//	System.out.println("Location :" + "[" + line + " " + colums + "]");
 			
 			printQueensList(listMovements(line,colums));
-			
 			board[line][colums] = 1;
 			printBoard(board);
+			plays.processAttacksRight(listMovements(line,colums),board);
+			plays.processAttacksLeft(listMovements(line,colums),board);
 		}
 		return this;
 	}

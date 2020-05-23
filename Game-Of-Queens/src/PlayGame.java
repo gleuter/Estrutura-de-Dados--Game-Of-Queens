@@ -5,7 +5,8 @@ public class PlayGame {
     Plays plays = new Plays();
 
     chessBoard.createBoardEmpty(board)
-    .initGame(board,2);
+    .initGame(board,1);
+    
 
   }
 }

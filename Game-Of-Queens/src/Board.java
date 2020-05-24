@@ -117,32 +117,37 @@ public class Board {
 			printQueensList(listMovements(line,colums));
 			board[line][colums] = 1;
 			printBoard(board);
-//			plays.processAttacksRight(listMovements(line,colums),board);
-//			plays.processAttacksLeft(listMovements(line,colums),board);
+			
+			plays.processAttacksRight(listMovements(line,colums),board);
+			plays.processAttacksLeft(listMovements(line,colums),board);
 			plays.processAttacksUp(listMovements(line,colums),board);
 			plays.processAttacksDown(listMovements(line,colums),board);
+			plays.processAttacksTopRightDiagonal(listMovements(line,colums),board);
+			plays.processAttacksTopLeftDiagonal(listMovements(line,colums),board);
+			plays.processAttacksDownLeftDiagonal(listMovements(line,colums),board);
+			plays.processAttacksDownRigthDiagonal(listMovements(line,colums),board);
+			
+			
+			
+			
 		}
 		return this;
 	}
 	
 	public static void printQueensList(LinkedList<Queens> lisOfQueensPositionad) {
+	
 		for(int positionOfList = 0;positionOfList < lisOfQueensPositionad.size();positionOfList++) {
 			System.out.println("Queens List : " + (positionOfList +1));
 			System.out.println("Line   : " + (lisOfQueensPositionad.get(positionOfList).getLineQueens()));	
 			System.out.println("Colums : " + (lisOfQueensPositionad.get(positionOfList).getColumsQueens()));	
 		}
 	}
-	
-	
-	
-
+		
 	public boolean processAttacks(LinkedList<Queens> listOfQueensPosisiotioned, int borad[][]) {
 		int line, columms;
-
 		for (int listCounter = 0; listCounter < listOfQueensPosisiotioned.size(); listCounter++) {
 			line = listOfQueensPosisiotioned.get(listCounter).getLineQueens();
 			columms = listOfQueensPosisiotioned.get(listCounter).getColumsQueens();
-
 			System.out.println("Next move for right: " + listCounter);
 			for (int countRight = columms; countRight < 8; countRight++) {
 				columms += 1;

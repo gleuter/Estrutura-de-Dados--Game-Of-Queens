@@ -4,8 +4,6 @@ public class PlayGame {
     int[][] board = new int[8][8];
    // Plays plays = new Plays();
     			
-
-
     chessBoard//.createBoardEmpty(board)
     .initGame(board,2);
     

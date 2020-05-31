@@ -15,7 +15,7 @@ public class Plays {
 
 		for (int listCounter = 0; listCounter < listOfQueensPosisiotioned.size(); listCounter++) {
 			 
-			if(linkedListAttackForQueens.get(listCounter + 1).size()>0)
+		
 			linkedListAttackForQueens.put(listCounter + 1, new LinkedList());
 
 			line = listOfQueensPosisiotioned.get(listCounter).getLineQueens();

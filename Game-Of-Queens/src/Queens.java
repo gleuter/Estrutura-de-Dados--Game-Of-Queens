@@ -24,4 +24,10 @@ public class Queens {
 		this.columsQueens = columsQueens;
 	}
 
+	@Override
+	public String toString() {
+		return "Queens [Line:= " + lineQueens + ", Colum =" + columsQueens + "]";
+	}
+	
+
 }

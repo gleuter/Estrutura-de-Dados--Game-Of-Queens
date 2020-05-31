@@ -24,8 +24,9 @@ public class Screen {
     JButton buttonArray[];
     JPanel pl;
     JFrame frame = new JFrame("Tabuleiro");
+        
     //Constructor creates the components in memory and adds the to the frame using combination of Borderlayout.
-    Tela(LinkedList<Queens> lista) {
+    Screen(LinkedList<Queens> lista) {
         windowContent= new JPanel();
     // Set the layout manager for this panel
         BorderLayout bl = new BorderLayout();
@@ -45,8 +46,10 @@ public class Screen {
         for(int x=0; x< 64; x++){
             
             boolean temRainhaNessaPosicao=false;
+            
             for(int checaPosicoesRainha=0; checaPosicoesRainha < lista.size(); checaPosicoesRainha++){
-                if(lista.get(checaPosicoesRainha).getLinha()==linha &&lista.get(checaPosicoesRainha).getColuna() ==coluna){
+            	
+                if(lista.get(checaPosicoesRainha).getLineQueens()==linha &&lista.get(checaPosicoesRainha).getColumsQueens() ==coluna){
                     temRainhaNessaPosicao=true;
                     break;
                 }
@@ -87,7 +90,7 @@ public class Screen {
     }
     
     //construtor que vc usa quando quer mostra a tela com a ajuda
-    Tela(LinkedList<Rainha> lista, Map<Integer, List<Rainha>> listaAtaquesPorRainha) {
+    Screen(LinkedList<Queens> lista, Map<Integer, List<Queens>> listaAtaquesPorRainha) {
         windowContent= new JPanel();
     // Set the layout manager for this panel
         BorderLayout bl = new BorderLayout();
@@ -109,7 +112,7 @@ public class Screen {
             boolean temRainhaNessaPosicao=false;
             //verifica se existe uma rainha na posição que o botão está sendo inserido
             for(int checaPosicoesRainha=0; checaPosicoesRainha < lista.size(); checaPosicoesRainha++){
-                if(lista.get(checaPosicoesRainha).getLinha()==linha &&lista.get(checaPosicoesRainha).getColuna() ==coluna){
+                if(lista.get(checaPosicoesRainha).getLineQueens()==linha &&lista.get(checaPosicoesRainha).getColumsQueens() ==coluna){
                     temRainhaNessaPosicao=true;
                     break;
                 }
@@ -120,8 +123,8 @@ public class Screen {
             
             for(int chavesDoMapa=1; chavesDoMapa<=listaAtaquesPorRainha.size(); chavesDoMapa++){
                 for(int verificaLista=0; verificaLista<listaAtaquesPorRainha.get(chavesDoMapa).size(); verificaLista++){
-                    if(listaAtaquesPorRainha.get(chavesDoMapa).get(verificaLista).getLinha()==linha&&
-                       listaAtaquesPorRainha.get(chavesDoMapa).get(verificaLista).getColuna()==coluna){
+                    if(listaAtaquesPorRainha.get(chavesDoMapa).get(verificaLista).getLineQueens()==linha&&
+                       listaAtaquesPorRainha.get(chavesDoMapa).get(verificaLista).getColumsQueens()==coluna){
                         alguemAtacaEssaPosicao=true;
                         break;
                     }

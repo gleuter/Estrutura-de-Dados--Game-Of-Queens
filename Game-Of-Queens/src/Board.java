@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 public class Board {
 	Plays plays = new Plays();
-	
+	Queens queens = new Queens(1, 1);
+		
 	/**
 	 * Create a board filled with zero
 	 *
@@ -126,11 +127,7 @@ public class Board {
 			plays.processAttacksTopLeftDiagonal(listMovements(line,colums),board);
 			plays.processAttacksDownLeftDiagonal(listMovements(line,colums),board);
 			plays.processAttacksDownRigthDiagonal(listMovements(line,colums),board);
-			
-			
-			
-			
-		}
+					}
 		return this;
 	}
 	
